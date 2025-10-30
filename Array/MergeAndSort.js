@@ -2,7 +2,17 @@ let arr1 = [1, 3, 4, 7, 4, 6];
 let arr2 = [2, 5, 6, 8, 9];
 
 function MergeSort(arr1, arr2) {
-  let merged = [...arr1, ...arr2];
+  // let merged = [...arr1, ...arr2]; / merged by spread operator
+
+  // merged by mannually
+  let merged = [];
+  for(let i =0;i < arr1.length;i++){
+    merged.push(arr1[i]);
+  }
+
+   for(let i =0;i < arr2.length;i++){
+    merged.push(arr2[i]);
+  }
 
   //sorting
   for (let i = 0; i < merged.length; i++) {
